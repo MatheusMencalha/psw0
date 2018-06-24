@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Trabalho PSW</title>
+        
+        <script>
+            function clicou(){
+                  document.getElementById("trocar").innerHTML = "Reprovado";
+               
+            }
+            
+            function clicou2(){
+                  document.getElementById("trocar").innerHTML = "Aprovado";
+               
+            }
+        </script>
+        
+        
+        
+        
+        <style>
+            table{
+                border-collapse: collapse;
+                border: 1px solid black;
+                font-family: Verdana 14;
+            }
+            
+            button{
+                margin-top: 30px;
+                margin-left: 50px;
+                font-family: Verdana 14;
+                font-size: 15px;
+            }
+            
+            form{
+                margin-top: 50px;
+                font-family: Verdana 14;
+            }
+            
+            input[type='submit']{
+                margin-top: 20px;
+                margin-left: 50px;
+                font-family: Verdana 14;
+            }
+            
+        
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <table border='1'>
+                <legend>Sistema Aluno</legend>
+                
+                <tr>
+                    <td>Aluno</td>
+                    <td>Nota1</td>
+                    <td>Nota2</td>
+                    <td>Nota Final</td>
+                    <td>Prova Final</td>
+                    <td>Situacao</td>
+                </tr>
+                
+                <tr>
+                    <td>Joao</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>9,5</td>
+                    <td>10</td>
+                    <td id="trocar">Aprovado</td>
+                </tr>
+                
+                <tr>
+                    <td>Maria</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>8,5</td>
+                    <td>10</td>
+                    <td>Aprovado</td>
+                </tr>
+                
+                <tr>
+                    <td>Jose</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>6,5</td>
+                    <td>10</td>
+                    <td>Aprovado</td>
+                </tr>
+            </table>
+            <button type="button" onclick="clicou()">Botao</button>
+            <button type="button" onclick="clicou2()">Reiniciar Botao</button>
+        </header>
+        
+        <div>
+            <form action="Servidor" method="POST">
+          
+                <legend>Inserir Notas</legend>
+                    
+                Aluno:<br>
+                <input type="text" name="aluno"><br>
+                
+                Nota1:<br>
+                <input type="text" name="nota1" ><br>
+                
+                Nota2:<br>
+                <input type="text" name="nota2" ><br>
+                
+                Nota Final:<br>
+                <input type="text" name="notafinal" ><br>
+                
+                Prova Final:<br>
+                <input type="text" name="provafinal"  ><br>
+                
+                <button type="submit"> Submeter </button>
+                       
+            </form>
+        </div>
+    </body>
+</html>
